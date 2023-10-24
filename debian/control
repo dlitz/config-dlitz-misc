@@ -1,0 +1,19 @@
+Source: config-dlitz-bashrc-root
+Section: unknown
+Priority: optional
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/config-dlitz-bashrc-root
+#Vcs-Git: https://salsa.debian.org/debian/config-dlitz-bashrc-root.git
+
+Package: config-dlitz-bashrc-root
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Description: <insert up to 60 chars description>
+ <Insert long description, indented with spaces.>
