@@ -1,0 +1,5 @@
+/.debhelper/
+/config-dlitz-bashrc-root.substvars
+/config-dlitz-bashrc-root/
+/debhelper-build-stamp
+/files
