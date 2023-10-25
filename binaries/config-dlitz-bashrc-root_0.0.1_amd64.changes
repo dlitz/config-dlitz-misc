@@ -1,0 +1,42 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 24 Oct 2023 19:54:56 -0700
+Source: config-dlitz-bashrc-root
+Binary: config-dlitz-bashrc-root
+Architecture: source all
+Version: 0.0.1
+Distribution: dlitz-aptly
+Urgency: medium
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Changed-By: Darsey Litzenberger <dlitz@dlitz.net>
+Description:
+ config-dlitz-bashrc-root - Darsey's customizations for root's .bashrc
+Changes:
+ config-dlitz-bashrc-root (0.0.1) dlitz-aptly; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 79abfa832b26b1eb05172fbc05fb5d3863565548 1054 config-dlitz-bashrc-root_0.0.1.dsc
+ 6639cd62df9829f7e658294714f61df78d745b98 5788 config-dlitz-bashrc-root_0.0.1.tar.xz
+ 6336ced15653e0d75c8bf402400b227e1268abb0 5680 config-dlitz-bashrc-root_0.0.1_all.deb
+ 76361a3717688cb952562a0c08226ff8b216f27a 5326 config-dlitz-bashrc-root_0.0.1_amd64.buildinfo
+Checksums-Sha256:
+ a78a241b4de4a31df777062b8f873275e0d12529440c975a14f9b0a8c028a9a5 1054 config-dlitz-bashrc-root_0.0.1.dsc
+ 174b87b2932f9833fec5ec8a90367fd1a7b84babfea48ac50b41410d39dd589e 5788 config-dlitz-bashrc-root_0.0.1.tar.xz
+ 3c08d6d3b7eeb36281485d2ddab7cd572fa9134972f0c48453a8a71f594a2d37 5680 config-dlitz-bashrc-root_0.0.1_all.deb
+ 9e45dd241c72b82a68e75d1e7610f0f298552e320d6cb467ba79ac39b42cc6ba 5326 config-dlitz-bashrc-root_0.0.1_amd64.buildinfo
+Files:
+ 7b8e047b06ffa7f282f3287146dfd948 1054 admin optional config-dlitz-bashrc-root_0.0.1.dsc
+ 8bc2a6d99a4ec60f704789a7a8ae0c5e 5788 admin optional config-dlitz-bashrc-root_0.0.1.tar.xz
+ f7339a5bc4cf1201bfb1564c1d796f24 5680 admin optional config-dlitz-bashrc-root_0.0.1_all.deb
+ 06350af3bd4f7c58b8c3842a3d7668a2 5326 admin optional config-dlitz-bashrc-root_0.0.1_amd64.buildinfo
+
+-----BEGIN PGP SIGNATURE-----
+
+iIYEARYKAC4WIQTWkd0xNWtIORg6n8DjQLK2WJpUpAUCZTiGThAcZGxpdHpAZGxp
+dHoubmV0AAoJEONAsrZYmlSkpsgA/iCmDNsAIwSVuBEo/M0qHXNDhhchgllPWZrf
+dy7TRkZFAQDNbJ8J0SF0EZosATcMzBH77gIZ1fDMtuLkc8cyTFUyCQ==
+=PHoU
+-----END PGP SIGNATURE-----
