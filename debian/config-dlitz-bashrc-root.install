@@ -1,0 +1,4 @@
+debian/tmp/usr/share/config-dlitz-bashrc-root/patch-conffile
+debian/tmp/usr/share/config-dlitz-bashrc-root/template
+debian/tmp/usr/share/config-dlitz-bashrc-root/root.bashrc
+debian/tmp/etc/root.bashrc

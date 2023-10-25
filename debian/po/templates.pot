@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the config-dlitz-bashrc-root package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: config-dlitz-bashrc-root\n"
+"Report-Msgid-Bugs-To: config-dlitz-bashrc-root@packages.debian.org\n"
+"POT-Creation-Date: 2023-10-24 19:53-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-bashrc-root.templates:1001
+msgid "Automatically patch '/root/.bashrc' ?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-bashrc-root.templates:1001
+msgid ""
+"A snippet of code can be appended to the root user's .bashrc file, which "
+"will automatically load the customizations provided by this package whenever "
+"an non-login root shell is started."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-bashrc-root.templates:1001
+msgid ""
+"If you enable this option, the file will be automatically re-patched when "
+"upgrading this package, and the patch will be automatically unapplied when "
+"purging the package.  If '/root/.bashrc' cannot be found, nothing will be "
+"done."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-bashrc-root.templates:1001
+msgid ""
+"If you want to examine the exact code that to be appended, see the '/usr/"
+"share/config-dlitz-bashrc-root/template' file."
+msgstr ""

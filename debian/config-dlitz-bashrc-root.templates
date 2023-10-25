@@ -1,0 +1,15 @@
+Template: config-dlitz-bashrc-root/patch-root-bashrc
+Type: boolean
+Default: true
+_Description: Automatically patch '/root/.bashrc' ?
+ A snippet of code can be appended to the root user's .bashrc file, which will
+ automatically load the customizations provided by this package whenever an
+ non-login root shell is started.
+ .
+ If you enable this option, the file will be automatically re-patched when
+ upgrading this package, and the patch will be automatically unapplied when
+ purging the package.  If '/root/.bashrc' cannot be found, nothing will be
+ done.
+ .
+ If you want to examine the exact code that to be appended, see the
+ '/usr/share/config-dlitz-bashrc-root/template' file.

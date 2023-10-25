@@ -1,0 +1,5 @@
+## BEGIN section automatically managed by the config-dlitz-bashrc-root package
+if [ -e /usr/share/config-dlitz-bashrc-root/root.bashrc ]; then
+    . /usr/share/config-dlitz-bashrc-root/root.bashrc
+fi
+## END section automatically managed by the config-dlitz-bashrc-root package

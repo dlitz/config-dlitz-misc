@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+# dlitz 2023
+from argparse import ArgumentParser
+from pathlib import Path, PurePath
+from io import StringIO
+from logging import getLogger
+import shlex
+import shutil
+import subprocess
+import sys
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    PurePathType = PurePosixPath
+else:
+    PurePathType = type(PurePath())
+
+globalLogger = log = getLogger(__name__)
+
+
+class PathArg:
+    def __new__(cls, *args):
+        obj = PurePath(*args)
+        if str(obj) == "-":
+            return StdioPathArg(*args)
+        else:
+            return Path(*args)
+
+
+class StdioPathArg(PurePathType):
+    def open(self, mode="r", *args, **kw):
+        return open_arg(self, mode, *args, **kw)
+
+    def read_bytes(self):
+        with open(sys.stdin.fileno(), "rb", closefd=False) as infile:
+            return infile.read()
+
+    def read_text(self):
+        with open(sys.stdin.fileno(), "r", closefd=False) as infile:
+            return infile.read()
+
+    def write_bytes(self, data):
+        with open(sys.stdout.fileno(), "wb", closefd=False) as outfile:
+            outfile.write(data)
+
+    def write_text(self, data, encoding=None, errors=None, newline=None):
+        with open(
+            sys.stdout.fileno(),
+            "w",
+            closefd=False,
+            encoding=encoding,
+            errors=errors,
+            newline=newline,
+        ) as outfile:
+            outfile.write(data)
+
+
+def open_arg(path, mode="r", *args, **kw):
+    if str(path) == "-":
+        if "r" in mode:
+            return open(sys.stdin.fileno(), mode, *args, closefd=False, **kw)
+        else:
+            return open(sys.stdout.fileno(), mode, *args, closefd=False, **kw)
+    return open(path, mode, *args, **kw)
+
+
+def parse_template(text: str):
+    template_lines = list(StringIO(text.rstrip() + "\n"))
+    assert len(template_lines) >= 2
+    begin_guard = template_lines[0]
+    end_guard = template_lines[-1]
+    assert (
+        "BEGIN" in begin_guard
+        and "END" in end_guard
+        and begin_guard.endswith("\n")
+        and end_guard.endswith("\n")
+    ), (begin_guard, end_guard)
+    return {
+        "begin_guard": begin_guard,
+        "end_guard": end_guard,
+        "lines": template_lines,
+        "inner_lines": template_lines[1:-1],
+    }
+
+
+def filter_content(template, content_lines, unapply=False):
+    state = 0
+    for line in content_lines:
+        match state:
+            case 0:
+                if line.rstrip() == template["begin_guard"].rstrip():
+                    state = 1
+                    if not unapply:
+                        yield template["begin_guard"]
+                        yield from template["inner_lines"]
+                else:
+                    yield line
+            case 1:
+                if line.rstrip() == template["end_guard"].rstrip():
+                    state = 2
+                    if not unapply:
+                        yield template["end_guard"]
+            case 2:
+                yield line
+    if state == 0 and not unapply:
+        yield template["begin_guard"]
+        yield from template["inner_lines"]
+        yield template["end_guard"]
+
+
+def init_logging(level, prog=None):
+    import logging
+
+    logging.basicConfig(format=f"{prog.replace('%', '%%')}: %(message)s")
+    globalLogger.setLevel(level)
+
+
+def parse_args():
+    global quiet
+    parser = ArgumentParser(
+        description="Add/Update/Remove a managed section in a config file"
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="count",
+        dest="verbosity",
+        default=0,
+        help="increase verbosity (max=2)",
+    )
+    parser.add_argument(
+        "-q",
+        "--quiet",
+        action="store_const",
+        dest="verbosity",
+        const=0,
+        help="set quiet move (undo --verbose)",
+    )
+    g = parser.add_mutually_exclusive_group()
+    g.add_argument(
+        "-i",
+        "--inplace",
+        metavar="BACKUP_SUFFIX",
+        nargs="?",
+        const="",
+        help="perform in-place overwrite of INPUT_FILE (with optional backup suffix)",
+    )
+    g.add_argument(
+        "-o",
+        "--output",
+        metavar="OUTPUT_FILE",
+        type=PathArg,
+        default=PathArg("-"),
+        help="output file, default: stdout",
+    )
+    parser.add_argument(
+        "-u", "--unapply", action="store_true", help="remove the managed section"
+    )
+    parser.add_argument("-t", "--template-file", type=PathArg, required=True)
+    parser.add_argument("input_file", metavar="INPUT_FILE", type=PathArg)
+    args = parser.parse_args()
+
+    if args.verbosity <= 0:
+        log_level = "WARNING"
+    elif args.verbosity <= 1:
+        log_level = "INFO"
+    else:
+        log_level = "DEBUG"
+    init_logging(log_level, prog=parser.prog)
+
+    log.debug(f"{args.inplace=!r}")
+
+    if args.inplace and "/" in args.inplace:
+        # Prevent silent error when the shell expands `-i ~` to `-i /home/user`
+        parser.error(f"illegal argument --inplace {shlex.quote(args.inplace)}")
+
+    return args, parser
+
+
+def main():
+    args, parser = parse_args()
+
+    try:
+        raw_template = args.template_file.read_text()
+        content_raw = args.input_file.read_text()
+    except (IOError, OSError) as e:
+        # friendly error message
+        print(f"{parser.prog}: error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    template = parse_template(raw_template)
+
+    content_lines = list(StringIO(content_raw))
+    new_content_lines = filter_content(template, content_lines, unapply=args.unapply)
+    new_content_raw = "".join(new_content_lines)
+
+    unchanged = content_raw == new_content_raw
+
+    if args.inplace is None:
+        args.output.write_text(new_content_raw)
+        if unchanged:
+            log.info(f"{args.input_file} unchanged")
+        return
+
+    if unchanged:
+        log.info(f"{args.input_file} unchanged")
+        return
+
+    if args.inplace:
+        backup_path = args.input_file.with_name(f"{args.input_file.name}{args.inplace}")
+        shutil.copyfile(args.input_file, backup_path)
+        log.info(f"{args.input_file} copied to {backup_path}")
+    args.input_file.write_text(new_content_raw)
+    log.info(f"{args.input_file} updated")
+
+
+if __name__ == "__main__":
+    main()
