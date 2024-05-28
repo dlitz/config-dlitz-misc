@@ -63,3 +63,12 @@ Description: Darsey's customizations for sudo environment variables (terminal va
  such as:
  - COLORFGBG
  - COLORTERM
+
+Package: config-dlitz-sudo-nopasswd
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Description: "sudo" without password
+ This package configures sudo to allow members of the "sudo" group to run
+ commands without a password.
