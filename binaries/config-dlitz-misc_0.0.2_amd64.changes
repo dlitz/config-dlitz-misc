@@ -1,0 +1,52 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 May 2024 23:21:17 -0600
+Source: config-dlitz-misc
+Binary: config-dlitz-bashrc-root config-dlitz-sudo-env-desktop config-dlitz-sudo-env-terminal
+Architecture: source all
+Version: 0.0.2
+Distribution: dlitz-aptly
+Urgency: medium
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Changed-By: Darsey Litzenberger <dlitz@dlitz.net>
+Description:
+ config-dlitz-bashrc-root - Darsey's customizations for root's .bashrc
+ config-dlitz-sudo-env-desktop - Darsey's customizations for sudo environment variables (desktop v
+ config-dlitz-sudo-env-terminal - Darsey's customizations for sudo environment variables (terminal
+Changes:
+ config-dlitz-misc (0.0.2) dlitz-aptly; urgency=medium
+ .
+   * Rename source package to "config-dlitz-misc"
+   * Add "config-dlitz-sudo-env-desktop" and "config-dlitz-sudo-env-terminal"
+     packages
+Checksums-Sha1:
+ d2ce20525420ed731248102abdf3f30fe6871bfd 1194 config-dlitz-misc_0.0.2.dsc
+ 0f88625263f21e987942b1e87230a2a41faab38a 6664 config-dlitz-misc_0.0.2.tar.xz
+ 131524e0650be74216ab3fa579896e75f8fbb7e8 5800 config-dlitz-bashrc-root_0.0.2_all.deb
+ 5dcb07623b449dee170da1326562c0b959eca7fe 7787 config-dlitz-misc_0.0.2_amd64.buildinfo
+ f7202b3a044fa637ffe7f846a6355e85dd169e6a 2668 config-dlitz-sudo-env-desktop_0.0.2_all.deb
+ bb95c6fe1d635f779f069d1aa450f11abbbb7e8c 2160 config-dlitz-sudo-env-terminal_0.0.2_all.deb
+Checksums-Sha256:
+ 5034407bee6ac590dd54f0dace084d8f9d5eef91ba996874194efa8eaf7da55f 1194 config-dlitz-misc_0.0.2.dsc
+ 58166cb504595a3bb0c23504fff114220b458500387542107c27ca3770ba16bc 6664 config-dlitz-misc_0.0.2.tar.xz
+ 1eabd9cd06def9f95f32c99700fd802dabf4451dd31b63390aaa2e05e13483d1 5800 config-dlitz-bashrc-root_0.0.2_all.deb
+ c389019598963afa574f28cfb732be3402f377739692f9178f4f7c670ad22ea2 7787 config-dlitz-misc_0.0.2_amd64.buildinfo
+ efedfa25c5968b4e780ee3f691fcfb017f30afeae560572e458844e64a4919e9 2668 config-dlitz-sudo-env-desktop_0.0.2_all.deb
+ 08ea00ac77d17a548eec773d08133b9905a05d5e680da86fcaa6acc04feabab5 2160 config-dlitz-sudo-env-terminal_0.0.2_all.deb
+Files:
+ 9bfd3b5894442f2ef0778bc801a03fdf 1194 admin optional config-dlitz-misc_0.0.2.dsc
+ d432320c60a450076774c827fdc73a2d 6664 admin optional config-dlitz-misc_0.0.2.tar.xz
+ f09282733099373032390d3561443aee 5800 admin optional config-dlitz-bashrc-root_0.0.2_all.deb
+ d568e052ccd4674a819f6a88d498e721 7787 admin optional config-dlitz-misc_0.0.2_amd64.buildinfo
+ 7900780172191bcd7d31685ee62e4f65 2668 admin optional config-dlitz-sudo-env-desktop_0.0.2_all.deb
+ dfc0129da4da4ec6043db0c0713bfd08 2160 admin optional config-dlitz-sudo-env-terminal_0.0.2_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iIYEARYKAC4WIQTWkd0xNWtIORg6n8DjQLK2WJpUpAUCZlVp4xAcZGxpdHpAZGxp
+dHoubmV0AAoJEONAsrZYmlSkveABAOrK7TQJ5ddYmArgU86bYIq2YAjZbled7TfD
+1DqevGkkAQDgbRkmy5Cimz1BsLtPlWwINhu4ctCxcN6hzKMGQGNWAQ==
+=PKUr
+-----END PGP SIGNATURE-----
