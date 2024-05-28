@@ -2,9 +2,7 @@
 /*.debhelper.log
 /*.substvars
 /.debhelper/
-/config-dlitz-bashrc-root/
-/config-dlitz-sudo-env-desktop/
-/config-dlitz-sudo-env-terminal/
+/config-dlitz-*/
 /debhelper-build-stamp
 /files
 /tmp/
