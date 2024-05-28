@@ -1,0 +1,57 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 May 2024 23:44:56 -0600
+Source: config-dlitz-misc
+Binary: config-dlitz-bashrc-root config-dlitz-sudo-env-desktop config-dlitz-sudo-env-terminal config-dlitz-sudo-nopasswd
+Architecture: source all
+Version: 0.0.3
+Distribution: dlitz-aptly
+Urgency: medium
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Changed-By: Darsey Litzenberger <dlitz@dlitz.net>
+Description:
+ config-dlitz-bashrc-root - Darsey's customizations for root's .bashrc
+ config-dlitz-sudo-env-desktop - Darsey's customizations for sudo environment variables (desktop v
+ config-dlitz-sudo-env-terminal - Darsey's customizations for sudo environment variables (terminal
+ config-dlitz-sudo-nopasswd - "sudo" without password
+Changes:
+ config-dlitz-misc (0.0.3) dlitz-aptly; urgency=medium
+ .
+   * Add config-dlitz-sudo-nopasswd
+   * Use wildcard in .gitignore
+   * Fix lintian warning: possible-unindented-list-in-extended-description
+   * Update debconf templates
+Checksums-Sha1:
+ 2bf5c91b422ea882b66251c48905f2ed87e78d7c 1278 config-dlitz-misc_0.0.3.dsc
+ b4f22ac3797e872a559387a0580190eafc382dcf 6900 config-dlitz-misc_0.0.3.tar.xz
+ 1632d36fb149762b5c2d796e293ae31eaf7213f6 5904 config-dlitz-bashrc-root_0.0.3_all.deb
+ 012f43c7cdcde7b882ba251abf1f5680fd7d6d74 8094 config-dlitz-misc_0.0.3_amd64.buildinfo
+ 438116fbb625c6853871375bc893dd83bbede67f 2776 config-dlitz-sudo-env-desktop_0.0.3_all.deb
+ ded996b990a6bda475b1debeb502107e7497c061 2268 config-dlitz-sudo-env-terminal_0.0.3_all.deb
+ ad299ffe93eca6ff9ecdb2b9a7690766bfa60564 2124 config-dlitz-sudo-nopasswd_0.0.3_all.deb
+Checksums-Sha256:
+ d168931ffbf9c49482820c9f595497836234403440639bd6a92acd5931dfe2cc 1278 config-dlitz-misc_0.0.3.dsc
+ d5df40399770867a87ccb4b754cb8aa330dd88a413c2b7177ae505a17b41266e 6900 config-dlitz-misc_0.0.3.tar.xz
+ 10e32fc7be9c36d417c32adab7cc0424ce650c2e569e893458975e18c74811bd 5904 config-dlitz-bashrc-root_0.0.3_all.deb
+ 15707d14dfd98fc3c9f763a40d75bdcc4d557fdc53f8c792a7fb63cb0f1b77dc 8094 config-dlitz-misc_0.0.3_amd64.buildinfo
+ 4092c5a3b4ecf22e2604b7399df50db788d9384877bf3e45f4609e040e5b5095 2776 config-dlitz-sudo-env-desktop_0.0.3_all.deb
+ 928bae5c825b2e4b09b7c875ffb831dc8aef1fbc321ef81aea9397ad5bf84da3 2268 config-dlitz-sudo-env-terminal_0.0.3_all.deb
+ 586bc8d112933c19cb732f357ed89d97bc98054aed8af2cc6a5c1d7e590e9cee 2124 config-dlitz-sudo-nopasswd_0.0.3_all.deb
+Files:
+ 310fbb95928eab81158d38c6b756e93f 1278 admin optional config-dlitz-misc_0.0.3.dsc
+ b6f6a61210a383dd403760c12e650d08 6900 admin optional config-dlitz-misc_0.0.3.tar.xz
+ e194de59e697a30f2cfd6d383435645e 5904 admin optional config-dlitz-bashrc-root_0.0.3_all.deb
+ 00ab26f323229be86d1d5cb5a6ccb8b3 8094 admin optional config-dlitz-misc_0.0.3_amd64.buildinfo
+ 5454b5c60490ee05671fb89f675686c1 2776 admin optional config-dlitz-sudo-env-desktop_0.0.3_all.deb
+ 1b7adc049cd5b9587d2da2eec7914a72 2268 admin optional config-dlitz-sudo-env-terminal_0.0.3_all.deb
+ e95d7cd371d2ebb417c694866e103058 2124 admin optional config-dlitz-sudo-nopasswd_0.0.3_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iIYEARYKAC4WIQTWkd0xNWtIORg6n8DjQLK2WJpUpAUCZlVveBAcZGxpdHpAZGxp
+dHoubmV0AAoJEONAsrZYmlSkUCQA/3TBTpDlSITR7qyTqypiTbzd+qcqejRRveqe
+b6ctBnizAQCIjri2Ql+Mn8Xxk9J0Xqs+SBufX1TAaWjiPklQKdvQCg==
+=yn2a
+-----END PGP SIGNATURE-----
