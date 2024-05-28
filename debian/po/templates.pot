@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the config-dlitz-bashrc-root package.
+# This file is distributed under the same license as the config-dlitz-misc package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: config-dlitz-bashrc-root\n"
-"Report-Msgid-Bugs-To: config-dlitz-bashrc-root@packages.debian.org\n"
-"POT-Creation-Date: 2023-10-24 19:53-0700\n"
+"Project-Id-Version: config-dlitz-misc\n"
+"Report-Msgid-Bugs-To: config-dlitz-misc@packages.debian.org\n"
+"POT-Creation-Date: 2024-05-27 23:42-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,6 @@ msgstr ""
 #. Description
 #: ../config-dlitz-bashrc-root.templates:1001
 msgid ""
-"If you want to examine the exact code that to be appended, see the '/usr/"
+"If you want to examine the exact code that will be appended, see the '/usr/"
 "share/config-dlitz-bashrc-root/template' file."
 msgstr ""
