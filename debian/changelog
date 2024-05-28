@@ -1,3 +1,12 @@
+config-dlitz-misc (0.0.3) dlitz-aptly; urgency=medium
+
+  * Add config-dlitz-sudo-nopasswd
+  * Use wildcard in .gitignore
+  * Fix lintian warning: possible-unindented-list-in-extended-description
+  * Update debconf templates
+
+ -- Darsey Litzenberger <dlitz@dlitz.net>  Mon, 27 May 2024 23:44:56 -0600
+
 config-dlitz-misc (0.0.2) dlitz-aptly; urgency=medium
 
   * Rename source package to "config-dlitz-misc"
