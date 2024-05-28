@@ -1,0 +1,7 @@
+# Preserve a few extra terminal environment variables
+
+Defaults	env_check +=	COLORFGBG
+Defaults	env_check +=	COLORTERM
+
+# If you keep the tabs intact, the above can be sorted using sort -k3
+# vim:set noexpandtab:

@@ -1,0 +1,33 @@
+# Allow some common variables to pass from my desktop to the root session for
+# things like dbus, notify-send, etc.
+# Note that notify-send uses unix socket auth to authenticate, so we need to
+# sudo back to ourselves for it to work.
+# This is a work in progress.
+
+Defaults:root,%sudo	env_keep  +=	DBUS_SESSION_BUS_ADDRESS
+Defaults:root,%sudo	env_check +=	DEBEMAIL
+Defaults:root,%sudo	env_check +=	DEBFULLNAME
+Defaults:root,%sudo	env_check +=	DESKTOP_SESSION
+Defaults:root,%sudo	env_check +=	GCC_COLORS
+Defaults:root,%sudo	env_keep  +=	GPG_AGENT_INFO
+Defaults:root,%sudo	env_keep  +=	GTK2_RC_FILES
+Defaults:root,%sudo	env_keep  +=	GTK_RC_FILES
+Defaults:root,%sudo	env_check +=	KDE_SESSION_UID
+Defaults:root,%sudo	env_check +=	KDE_SESSION_VERSION
+Defaults:root,%sudo	env_keep  +=	KONSOLE_DBUS_SERVICE
+Defaults:root,%sudo	env_keep  +=	KONSOLE_DBUS_SESSION
+Defaults:root,%sudo	env_keep  +=	KONSOLE_DBUS_WINDOW
+Defaults:root,%sudo	env_keep  +=	SSH_AUTH_SOCK
+Defaults:root,%sudo	env_check +=	WINDOWID
+Defaults:root,%sudo	env_check +=	XDG_CURRENT_DESKTOP
+Defaults:root,%sudo	env_check +=	XDG_SEAT
+Defaults:root,%sudo	env_keep  +=	XDG_SEAT_PATH
+Defaults:root,%sudo	env_check +=	XDG_SESSION_CLASS
+Defaults:root,%sudo	env_check +=	XDG_SESSION_DESKTOP
+Defaults:root,%sudo	env_check +=	XDG_SESSION_ID
+Defaults:root,%sudo	env_keep  +=	XDG_SESSION_PATH
+Defaults:root,%sudo	env_check +=	XDG_SESSION_TYPE
+Defaults:root,%sudo	env_check +=	XDG_VTNR
+
+# If you keep the tabs intact, the above can be sorted using sort -k3
+# vim:set noexpandtab:

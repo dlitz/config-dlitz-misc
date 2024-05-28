@@ -18,3 +18,48 @@ Depends:
  python3 (>= 3.9),
 Description: Darsey's customizations for root's .bashrc
  This package enhances the root user's shell by patching /root/.bashrc
+
+Package: config-dlitz-sudo-env-desktop
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ config-dlitz-sudo-env-terminal,
+Description: Darsey's customizations for sudo environment variables (desktop vars)
+ This package adds extra environment variables to be preserved across sudo,
+ such as:
+ - DBUS_SESSION_BUS_ADDRESS
+ - DEBEMAIL
+ - DEBFULLNAME
+ - DESKTOP_SESSION
+ - GCC_COLORS
+ - GPG_AGENT_INFO
+ - GTK2_RC_FILES
+ - GTK_RC_FILES
+ - KDE_SESSION_UID
+ - KDE_SESSION_VERSION
+ - KONSOLE_DBUS_SERVICE
+ - KONSOLE_DBUS_SESSION
+ - KONSOLE_DBUS_WINDOW
+ - SSH_AUTH_SOCK
+ - WINDOWID
+ - XDG_CURRENT_DESKTOP
+ - XDG_SEAT
+ - XDG_SEAT_PATH
+ - XDG_SESSION_CLASS
+ - XDG_SESSION_DESKTOP
+ - XDG_SESSION_ID
+ - XDG_SESSION_PATH
+ - XDG_SESSION_TYPE
+ - XDG_VTNR
+
+Package: config-dlitz-sudo-env-terminal
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Description: Darsey's customizations for sudo environment variables (terminal vars)
+ This package adds extra environment variables to be preserved across sudo,
+ such as:
+ - COLORFGBG
+ - COLORTERM

@@ -3,6 +3,8 @@
 /*.substvars
 /.debhelper/
 /config-dlitz-bashrc-root/
+/config-dlitz-sudo-env-desktop/
+/config-dlitz-sudo-env-terminal/
 /debhelper-build-stamp
 /files
 /tmp/

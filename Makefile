@@ -20,4 +20,7 @@ install:
 	mkdir -p $(DESTDIR)/etc
 	cp -rt $(DESTDIR)/etc root.bashrc
 
+	mkdir -p $(DESTDIR)/etc/sudoers.d
+	cp -rt $(DESTDIR)/etc/sudoers.d sudoers.d/*
+
 .PHONY: all install clean
