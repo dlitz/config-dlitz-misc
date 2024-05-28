@@ -1,4 +1,4 @@
-Source: config-dlitz-bashrc-root
+Source: config-dlitz-misc
 Section: admin
 Priority: optional
 Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
@@ -7,8 +7,8 @@ Build-Depends:
  debhelper-compat (= 13),
  po-debconf,
 Standards-Version: 4.6.2
-Vcs-Browser: https://github.com/dlitz/config-dlitz-bashrc-root
-Vcs-Git: https://github.com/dlitz/config-dlitz-bashrc-root.git
+Vcs-Browser: https://github.com/dlitz/config-dlitz-misc
+Vcs-Git: https://github.com/dlitz/config-dlitz-misc.git
 
 Package: config-dlitz-bashrc-root
 Architecture: all
