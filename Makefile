@@ -23,4 +23,6 @@ install:
 	mkdir -p $(DESTDIR)/etc/sudoers.d
 	cp -rt $(DESTDIR)/etc/sudoers.d sudoers.d/*
 
+	mkdir -p $(DESTDIR)/etc/wireguard/keys
+
 .PHONY: all install clean

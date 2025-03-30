@@ -1,0 +1,4 @@
+# Use the same package perms as in wireguard-tools for etc/wireguard, and do
+# the same for etc/wireguard/keys
+config-dlitz-wireguard-perms: non-standard-dir-perm etc/wireguard/ 0700 != 0755
+config-dlitz-wireguard-perms: non-standard-dir-perm etc/wireguard/keys/ 0700 != 0755

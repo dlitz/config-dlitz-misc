@@ -72,3 +72,14 @@ Depends:
 Description: "sudo" without password
  This package configures sudo to allow members of the "sudo" group to run
  commands without a password.
+
+Package: config-dlitz-wireguard-perms
+Architecture: all
+Depends:
+ systemd,
+ ${misc:Depends},
+Suggests:
+ wireguard-tools,
+Description: Sets permissions for systemd-networkd to access /etc/wireguard/keys
+ This is an empty package that uses dpkg-statoverride(1) to make
+ /etc/wireguard/keys accessible to systemd-networkd.

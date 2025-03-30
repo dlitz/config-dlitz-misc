@@ -1,0 +1,11 @@
+Template: config-dlitz-wireguard-perms/statoverride
+Type: boolean
+Default: true
+_Description: Update permissions/ownership for '/etc/wireguard/keys' ?
+ If you enable this option, the package will use dpkg-statoverride to modify
+ the permissions of /etc/wireguard/keys and its parent directory to make them
+ accessible by the systemd-networkd daemon.
+ .
+ If you disable this option after it was previously enabled, or when the
+ package is purged, the package will revert the directories' ownership to
+ root:root and the permissions to 0700.

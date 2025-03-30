@@ -4,3 +4,10 @@
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
+
+override_dh_installdeb:
+	dh_installdeb --define WIREGUARD_REMOVEOVERRIDE_SNIPPET=@debian/snippets/wireguard-removeoverride-snippet.sh
+
+execute_after_dh_fixperms:
+	chmod 700 debian/tmp/etc/wireguard
+	chmod 700 debian/tmp/etc/wireguard/keys
