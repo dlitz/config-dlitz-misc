@@ -1,0 +1,58 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Mar 2025 01:00:54 -0600
+Source: config-dlitz-misc
+Binary: config-dlitz-bashrc-root config-dlitz-sudo-env-desktop config-dlitz-sudo-env-terminal config-dlitz-sudo-nopasswd config-dlitz-wireguard-perms
+Architecture: source all
+Version: 0.0.4
+Distribution: dlitz-aptly
+Urgency: medium
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Changed-By: Darsey Litzenberger <dlitz@dlitz.net>
+Description:
+ config-dlitz-bashrc-root - Darsey's customizations for root's .bashrc
+ config-dlitz-sudo-env-desktop - Darsey's customizations for sudo environment variables (desktop v
+ config-dlitz-sudo-env-terminal - Darsey's customizations for sudo environment variables (terminal
+ config-dlitz-sudo-nopasswd - "sudo" without password
+ config-dlitz-wireguard-perms - Sets permissions for systemd-networkd to access /etc/wireguard/ke
+Changes:
+ config-dlitz-misc (0.0.4) dlitz-aptly; urgency=medium
+ .
+   * Add config-dlitz-wireguard-perms
+Checksums-Sha1:
+ e2dc60cdc93485e4defdd52ddf7857bd7efe1e1d 1366 config-dlitz-misc_0.0.4.dsc
+ b76843aa84c15168c008dd3875004383b4f4fa4b 7908 config-dlitz-misc_0.0.4.tar.xz
+ 9e4a2658d2afb944992cc619cc2c1c944212fb99 5940 config-dlitz-bashrc-root_0.0.4_all.deb
+ 50f6d792f8c93c1a5f2a336fe6b24cd48bad5675 8408 config-dlitz-misc_0.0.4_amd64.buildinfo
+ a5f5ba0ae6c57a40449435df2bac9b3b01e7469a 2808 config-dlitz-sudo-env-desktop_0.0.4_all.deb
+ 4e4c0e87444f4cc55422fbde32ee1ad5f55f1f3a 2304 config-dlitz-sudo-env-terminal_0.0.4_all.deb
+ 08f758fdbe9f6ee1571c41c4268d956c2c7f9523 2156 config-dlitz-sudo-nopasswd_0.0.4_all.deb
+ 022a112b86f2d2539052c37cb263ffd4ab5699e4 3640 config-dlitz-wireguard-perms_0.0.4_all.deb
+Checksums-Sha256:
+ 48127e3a6af04d26a34e3712c84de2df06c34183a8e225bcf0217b19f3b2e316 1366 config-dlitz-misc_0.0.4.dsc
+ 82a223b58a3b68a33f7482cdb48c29c443aa2619525a9a4e6117257ed4488b3f 7908 config-dlitz-misc_0.0.4.tar.xz
+ 54240b9268d3a6d9b96cdd374d6a8e87b48a47ffaf606a73832ff77891ee36fd 5940 config-dlitz-bashrc-root_0.0.4_all.deb
+ a4c7f2a60a34006344e42d3c9d514a3bcf5ef2e6163a74d0a06918414f91ff5b 8408 config-dlitz-misc_0.0.4_amd64.buildinfo
+ 74e15b589bfe0fb7851fe2df1b61c4d7dc8434ae38c4032618cb5ec84706b7d3 2808 config-dlitz-sudo-env-desktop_0.0.4_all.deb
+ 713cad337e071d29df4bb7e1b96a1426bdc68cab4f2b239bafb85795786bc243 2304 config-dlitz-sudo-env-terminal_0.0.4_all.deb
+ 7401f9f5f0a41c7755f4916b46558290ce6056f43954baf3cc4ef5839e05be45 2156 config-dlitz-sudo-nopasswd_0.0.4_all.deb
+ 8e7bf0d95d4882bb1eeb901e69ff8e8b4d8ba0e0a0e219457a358ddbed7a92bd 3640 config-dlitz-wireguard-perms_0.0.4_all.deb
+Files:
+ 3a7cae501ad329a4a041f47662acdb6e 1366 admin optional config-dlitz-misc_0.0.4.dsc
+ fbf371574ee0e4a20c25087beac05e50 7908 admin optional config-dlitz-misc_0.0.4.tar.xz
+ b4c90e13a077af9da00cf4334fee9454 5940 admin optional config-dlitz-bashrc-root_0.0.4_all.deb
+ e35951b24092cddf0c69a0ccb8d03170 8408 admin optional config-dlitz-misc_0.0.4_amd64.buildinfo
+ e77be167ec8e5dfbf2abc2dabedb378e 2808 admin optional config-dlitz-sudo-env-desktop_0.0.4_all.deb
+ 538bf37a158406d96c25af9f7ac2e294 2304 admin optional config-dlitz-sudo-env-terminal_0.0.4_all.deb
+ ed86986b64909ae4a185f286f64dd781 2156 admin optional config-dlitz-sudo-nopasswd_0.0.4_all.deb
+ 20f70ce3a24d28e272d002474d29226d 3640 admin optional config-dlitz-wireguard-perms_0.0.4_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iIYEARYKAC4WIQTWkd0xNWtIORg6n8DjQLK2WJpUpAUCZ+jscBAcZGxpdHpAZGxp
+dHoubmV0AAoJEONAsrZYmlSkD/YA/2NJsu3OElZAB9QHs2PgYVEQlS07wWazDxle
+i6y5OSWrAPwOvkADo4HMntMVt+6xMlhRRHw5WV4Bn4mn0c6czTAcCg==
+=XFfe
+-----END PGP SIGNATURE-----

@@ -1,0 +1,93 @@
+ dpkg-buildpackage -us -uc -ui -i -I
+dpkg-buildpackage: info: source package config-dlitz-misc
+dpkg-buildpackage: info: source version 0.0.4
+dpkg-buildpackage: info: source distribution dlitz-aptly
+dpkg-buildpackage: info: source changed by Darsey Litzenberger <dlitz@dlitz.net>
+ dpkg-source -i -I --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_auto_clean
+   dh_clean
+ dpkg-source -i -I -b .
+dpkg-source: info: using source format '3.0 (native)'
+dpkg-source: info: building config-dlitz-misc in config-dlitz-misc_0.0.4.tar.xz
+dpkg-source: info: building config-dlitz-misc in config-dlitz-misc_0.0.4.dsc
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+   dh_auto_build
+	make -j8 "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+dh_auto_install --destdir=debian/tmp
+	make -j8 install DESTDIR=/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp AM_UPDATE_INFO_DIR=no "INSTALL=install --strip-program=true"
+make[2]: Entering directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+umask 022
+mkdir -p /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/usr/share/config-dlitz-bashrc-root
+cp -rt /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/usr/share/config-dlitz-bashrc-root \
+	share/root.bashrc \
+	share/patch-conffile \
+	share/template
+mkdir -p /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/etc
+cp -rt /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/etc root.bashrc
+mkdir -p /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/etc/sudoers.d
+cp -rt /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/etc/sudoers.d sudoers.d/*
+mkdir -p /home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc/debian/tmp/etc/wireguard/keys
+make[2]: Leaving directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+make[1]: Leaving directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installdebconf
+   dh_lintian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   debian/rules execute_after_dh_fixperms
+make[1]: Entering directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+chmod 700 debian/tmp/etc/wireguard
+chmod 700 debian/tmp/etc/wireguard/keys
+make[1]: Leaving directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+   dh_missing
+   debian/rules override_dh_installdeb
+make[1]: Entering directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+dh_installdeb --define WIREGUARD_REMOVEOVERRIDE_SNIPPET=@debian/snippets/wireguard-removeoverride-snippet.sh
+make[1]: Leaving directory '/home/dwon/workspaces/my-debs/config-dlitz-misc/config-dlitz-misc'
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'config-dlitz-sudo-nopasswd' in '../config-dlitz-sudo-nopasswd_0.0.4_all.deb'.
+dpkg-deb: building package 'config-dlitz-bashrc-root' in '../config-dlitz-bashrc-root_0.0.4_all.deb'.
+dpkg-deb: building package 'config-dlitz-sudo-env-desktop' in '../config-dlitz-sudo-env-desktop_0.0.4_all.deb'.
+dpkg-deb: building package 'config-dlitz-sudo-env-terminal' in '../config-dlitz-sudo-env-terminal_0.0.4_all.deb'.
+dpkg-deb: building package 'config-dlitz-wireguard-perms' in '../config-dlitz-wireguard-perms_0.0.4_all.deb'.
+ dpkg-genbuildinfo -O../config-dlitz-misc_0.0.4_amd64.buildinfo
+ dpkg-genchanges -O../config-dlitz-misc_0.0.4_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source -i -I --after-build .
+dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
+Now running lintian config-dlitz-misc_0.0.4_amd64.changes ...
+E: config-dlitz-misc changes: bad-distribution-in-changes-file dlitz-aptly
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile dsc config-dlitz-misc_0.0.4.dsc Darsey Litzenberger <dlitz@dlitz.net>
+
+ fixup_buildinfo config-dlitz-misc_0.0.4.dsc config-dlitz-misc_0.0.4_amd64.buildinfo
+ signfile buildinfo config-dlitz-misc_0.0.4_amd64.buildinfo Darsey Litzenberger <dlitz@dlitz.net>
+
+ fixup_changes dsc config-dlitz-misc_0.0.4.dsc config-dlitz-misc_0.0.4_amd64.changes
+ fixup_changes buildinfo config-dlitz-misc_0.0.4_amd64.buildinfo config-dlitz-misc_0.0.4_amd64.changes
+ signfile changes config-dlitz-misc_0.0.4_amd64.changes Darsey Litzenberger <dlitz@dlitz.net>
+
+Successfully signed dsc, buildinfo, changes files
