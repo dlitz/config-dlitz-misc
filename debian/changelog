@@ -1,3 +1,9 @@
+config-dlitz-misc (0.0.4) dlitz-aptly; urgency=medium
+
+  * Add config-dlitz-wireguard-perms
+
+ -- Darsey Litzenberger <dlitz@dlitz.net>  Sun, 30 Mar 2025 01:00:54 -0600
+
 config-dlitz-misc (0.0.3) dlitz-aptly; urgency=medium
 
   * Add config-dlitz-sudo-nopasswd
