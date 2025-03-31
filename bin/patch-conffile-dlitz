@@ -114,9 +114,7 @@ def init_logging(level, prog=None):
     logging.basicConfig(format=f"{prog.replace('%', '%%')}: %(message)s")
     globalLogger.setLevel(level)
 
-
-def parse_args():
-    global quiet
+def make_arg_parser():
     parser = ArgumentParser(
         description="Add/Update/Remove a managed section in a config file"
     )
@@ -158,6 +156,10 @@ def parse_args():
     )
     parser.add_argument("-t", "--template-file", type=PathArg, required=True)
     parser.add_argument("input_file", metavar="INPUT_FILE", type=PathArg)
+    return parser
+
+def parse_args():
+    parser = make_arg_parser()
     args = parser.parse_args()
 
     if args.verbosity <= 0:

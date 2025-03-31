@@ -6,6 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  po-debconf,
+ python3-argparse-manpage (>= 4.5),
 Standards-Version: 4.6.2
 Vcs-Browser: https://github.com/dlitz/config-dlitz-misc
 Vcs-Git: https://github.com/dlitz/config-dlitz-misc.git
