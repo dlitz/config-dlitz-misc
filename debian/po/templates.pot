@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: config-dlitz-misc\n"
 "Report-Msgid-Bugs-To: config-dlitz-misc@packages.debian.org\n"
-"POT-Creation-Date: 2024-05-27 23:42-0600\n"
+"POT-Creation-Date: 2025-03-31 01:35-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,4 +48,28 @@ msgstr ""
 msgid ""
 "If you want to examine the exact code that will be appended, see the '/usr/"
 "share/config-dlitz-bashrc-root/template' file."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-wireguard-perms.templates:1001
+msgid "Update permissions/ownership for '/etc/wireguard/keys' ?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-wireguard-perms.templates:1001
+msgid ""
+"If you enable this option, the package will use dpkg-statoverride to modify "
+"the permissions of /etc/wireguard/keys and its parent directory to make them "
+"accessible by the systemd-networkd daemon."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../config-dlitz-wireguard-perms.templates:1001
+msgid ""
+"If you disable this option after it was previously enabled, or when the "
+"package is purged, the package will revert the directories' ownership to "
+"root:root and the permissions to 0700."
 msgstr ""

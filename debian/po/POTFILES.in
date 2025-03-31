@@ -1,1 +1,2 @@
 [type: gettext/rfc822deb] config-dlitz-bashrc-root.templates
+[type: gettext/rfc822deb] config-dlitz-wireguard-perms.templates
