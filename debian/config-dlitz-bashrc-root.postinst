@@ -26,7 +26,7 @@ case "$1" in
         want_patch="$RET"
 
         if [ "$want_patch" = true ] && [ -e /root/.bashrc ]; then
-            /usr/share/config-dlitz-bashrc-root/patch-conffile \
+            patch-conffile-dlitz \
                 --verbose \
                 --inplace \
                 --template /usr/share/config-dlitz-bashrc-root/template \

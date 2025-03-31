@@ -11,10 +11,13 @@ mrproper: clean
 
 install:
 	umask 022
+
+	mkdir -p $(DESTDIR)/usr/bin
+	cp -rt $(DESTDIR)/usr/bin bin/patch-conffile-dlitz
+
 	mkdir -p $(DESTDIR)/usr/share/config-dlitz-bashrc-root
 	cp -rt $(DESTDIR)/usr/share/config-dlitz-bashrc-root \
 		share/root.bashrc \
-		share/patch-conffile \
 		share/template
 
 	mkdir -p $(DESTDIR)/etc
