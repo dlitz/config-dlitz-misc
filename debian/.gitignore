@@ -3,6 +3,7 @@
 /*.substvars
 /.debhelper/
 /config-dlitz-*/
+/patch-conffile-dlitz/
 /debhelper-build-stamp
 /files
 /tmp/
