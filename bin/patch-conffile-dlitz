@@ -225,11 +225,11 @@ def main():
     if args.inplace is None:
         args.output.write_text(new_content_raw)
         if unchanged:
-            log.info(f"{args.input_file} unchanged")
+            log.debug(f"{args.input_file} unchanged")
         return
 
     if unchanged:
-        log.info(f"{args.input_file} unchanged")
+        log.debug(f"{args.input_file} unchanged")
         return
 
     if args.inplace:
