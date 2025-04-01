@@ -29,9 +29,11 @@ case "$1" in
             want_patch="$RET"
 
             if [ "$want_patch" = true ] && [ -e /root/.bashrc ]; then
-                echo >&2 "#PACKAGE#: removing snippet from /root/.bashrc"
-                sed -i~ -Ee \
-                    '/^## BEGIN section automatically managed by the config-dlitz-bashrc-root package$/,/^## END section automatically managed by the config-dlitz-bashrc-root package$/d' \
+                patch-conffile-dlitz \
+                    --verbose \
+                    --inplace \
+                    --guard-string 'section automatically managed by the config-dlitz-bashrc-root package' \
+                    --unapply \
                     /root/.bashrc
             fi
         fi

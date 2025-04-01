@@ -29,6 +29,7 @@ case "$1" in
             patch-conffile-dlitz \
                 --verbose \
                 --inplace \
+                --guard-string 'section automatically managed by the config-dlitz-bashrc-root package' \
                 --template /usr/share/config-dlitz-bashrc-root/template \
                 /root/.bashrc
         fi

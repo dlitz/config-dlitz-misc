@@ -64,8 +64,14 @@ def open_arg(path, mode="r", *args, **kw):
     return open(path, mode, *args, **kw)
 
 
-def parse_template(text: str):
+def parse_template(text: str, guard_string: str | None = None):
     template_lines = list(StringIO(text.rstrip() + "\n"))
+    if guard_string is not None:
+        template_lines = [
+            f"## BEGIN {guard_string}\n",
+            *template_lines,
+            f"## END {guard_string}\n",
+        ]
     assert len(template_lines) >= 2
     begin_guard = template_lines[0]
     end_guard = template_lines[-1]
@@ -155,8 +161,12 @@ def make_arg_parser():
     parser.add_argument(
         "-u", "--unapply", action="store_true", help="remove the managed section"
     )
-    parser.add_argument("-t", "--template-file", type=PathArg, required=True)
+    parser.add_argument("-t", "--template-file", type=PathArg)
+    parser.add_argument(
+        "-g", "--guard-string", help="the string to be added after BEGIN and END tags"
+    )
     parser.add_argument("input_file", metavar="INPUT_FILE", type=PathArg)
+    parser.epilog = "At least one of --template-file or --guard-string is required."
     return parser
 
 
@@ -178,21 +188,33 @@ def parse_args():
         # Prevent silent error when the shell expands `-i ~` to `-i /home/user`
         parser.error(f"illegal argument --inplace {shlex.quote(args.inplace)}")
 
+    if not args.template_file and not args.guard_string:
+        parser.error(f"at least one of --template-file or --guard-string is required")
+
     return args, parser
 
 
 def main():
     args, parser = parse_args()
 
+    if args.template_file:
+        try:
+            raw_template = args.template_file.read_text()
+        except (IOError, OSError) as e:
+            # friendly error message
+            print(f"{parser.prog}: error: {e}", file=sys.stderr)
+            sys.exit(1)
+    else:
+        raw_template = ""
+
+    template = parse_template(raw_template, guard_string=args.guard_string)
+
     try:
-        raw_template = args.template_file.read_text()
         content_raw = args.input_file.read_text()
     except (IOError, OSError) as e:
         # friendly error message
         print(f"{parser.prog}: error: {e}", file=sys.stderr)
         sys.exit(1)
-
-    template = parse_template(raw_template)
 
     content_lines = list(StringIO(content_raw))
     new_content_lines = filter_content(template, content_lines, unapply=args.unapply)
