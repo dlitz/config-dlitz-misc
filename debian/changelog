@@ -1,3 +1,16 @@
+config-dlitz-misc (0.0.5) dlitz-aptly; urgency=medium
+
+  * Add missing i18n data for config-dlitz-wireguard-perms
+  * Rename patch-conffile as patch-conffile-dlitz
+  * Move patch-conffile-dlitz to its own package
+  * patch-conffile-dlitz: Generate manpage using argparse-manpage
+  * patch-conffile-dlitz: code auto-formatting
+  * patch-conffile-dlitz: Add --guard-string option, making the script useful
+    for postrm scripts
+  * patch-conffile-dlitz: Reduce log level of the "unchanged" message
+
+ -- Darsey Litzenberger <dlitz@dlitz.net>  Tue, 01 Apr 2025 22:06:46 -0600
+
 config-dlitz-misc (0.0.4) dlitz-aptly; urgency=medium
 
   * Add config-dlitz-wireguard-perms
