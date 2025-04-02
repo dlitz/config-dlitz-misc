@@ -1,0 +1,69 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 01 Apr 2025 22:06:46 -0600
+Source: config-dlitz-misc
+Binary: config-dlitz-bashrc-root config-dlitz-sudo-env-desktop config-dlitz-sudo-env-terminal config-dlitz-sudo-nopasswd config-dlitz-wireguard-perms patch-conffile-dlitz
+Architecture: source all
+Version: 0.0.5
+Distribution: dlitz-aptly
+Urgency: medium
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Changed-By: Darsey Litzenberger <dlitz@dlitz.net>
+Description:
+ config-dlitz-bashrc-root - Darsey's customizations for root's .bashrc
+ config-dlitz-sudo-env-desktop - Darsey's customizations for sudo environment variables (desktop v
+ config-dlitz-sudo-env-terminal - Darsey's customizations for sudo environment variables (terminal
+ config-dlitz-sudo-nopasswd - "sudo" without password
+ config-dlitz-wireguard-perms - Sets permissions for systemd-networkd to access /etc/wireguard/ke
+ patch-conffile-dlitz - Tool for patching configuration files
+Changes:
+ config-dlitz-misc (0.0.5) dlitz-aptly; urgency=medium
+ .
+   * Add missing i18n data for config-dlitz-wireguard-perms
+   * Rename patch-conffile as patch-conffile-dlitz
+   * Move patch-conffile-dlitz to its own package
+   * patch-conffile-dlitz: Generate manpage using argparse-manpage
+   * patch-conffile-dlitz: code auto-formatting
+   * patch-conffile-dlitz: Add --guard-string option, making the script useful
+     for postrm scripts
+   * patch-conffile-dlitz: Reduce log level of the "unchanged" message
+Checksums-Sha1:
+ 9bbaf77d4746b6eb5e9daaf4089b6055c9cfb87e 1473 config-dlitz-misc_0.0.5.dsc
+ 35c19df50effd56da1fb33d66b198ffbab082947 8468 config-dlitz-misc_0.0.5.tar.xz
+ 9000292b78b6d79167ccc213668d6de55c6a93a6 4216 config-dlitz-bashrc-root_0.0.5_all.deb
+ f829553efb443d5dcba98ac779761949700c7245 9129 config-dlitz-misc_0.0.5_amd64.buildinfo
+ 6daa809f56b3d9ef305e164b0d4d20807f98217e 2996 config-dlitz-sudo-env-desktop_0.0.5_all.deb
+ 855a0cdd9a33e69efb6e093cc5dc3977a3dff212 2492 config-dlitz-sudo-env-terminal_0.0.5_all.deb
+ b8344a1b443f044783363855828465500e09cf5f 2344 config-dlitz-sudo-nopasswd_0.0.5_all.deb
+ b0692e9c3b1325af4e05d16588f4487129033855 3864 config-dlitz-wireguard-perms_0.0.5_all.deb
+ 5e733fa0b8f9cf4ad73ad8a0abf8881a39b9567d 5120 patch-conffile-dlitz_0.0.5_all.deb
+Checksums-Sha256:
+ 164359949de44cd3a1a19ac033159c7211d745c0731918cea71d9d46c80c1848 1473 config-dlitz-misc_0.0.5.dsc
+ 00d03165d4e088c6287245690588e96cd7f5904eb145d8c4d1d9557548a83063 8468 config-dlitz-misc_0.0.5.tar.xz
+ e281f524395beca91e5c60dcff6776e9d2ffd46a9f97471c44de37de0fe4a0de 4216 config-dlitz-bashrc-root_0.0.5_all.deb
+ d871eb491327bab33c3e1ed73a31927f578f746953cad028aab87f68583751af 9129 config-dlitz-misc_0.0.5_amd64.buildinfo
+ 348e98b5f535915525e94826507d4b7467c2585420036f1ec13e643d37fcff1c 2996 config-dlitz-sudo-env-desktop_0.0.5_all.deb
+ 825dc78cda28b6ebdcda6e9edc4b3cea542965fa78790a6895df3dcb8c27ee0e 2492 config-dlitz-sudo-env-terminal_0.0.5_all.deb
+ 602dda943d1238825a7cb8e931579b056e9058c0d5f8fac422204fee5f71e1e3 2344 config-dlitz-sudo-nopasswd_0.0.5_all.deb
+ e011c0de713fbf015770759f8ed0f78a5b897c53332827bd61c98116dde3cea8 3864 config-dlitz-wireguard-perms_0.0.5_all.deb
+ 59acc52dc1f4951e49e17ecaf47d842b3905005eba5d8c28a8a2aaaf3d8791d2 5120 patch-conffile-dlitz_0.0.5_all.deb
+Files:
+ ab2cfd1061d0b9390ef76a3b56852848 1473 admin optional config-dlitz-misc_0.0.5.dsc
+ 64d62b4ac711c5a9a7440c5154bb139a 8468 admin optional config-dlitz-misc_0.0.5.tar.xz
+ 608983ebd65ef8fc6df3d63f69acb912 4216 admin optional config-dlitz-bashrc-root_0.0.5_all.deb
+ 7e91517dc248a33621e384f93d4a3c17 9129 admin optional config-dlitz-misc_0.0.5_amd64.buildinfo
+ 34a1f47ce40533d03509ff736bbaffc3 2996 admin optional config-dlitz-sudo-env-desktop_0.0.5_all.deb
+ 1e79d95f4aae8364f47c2e6afb0fc996 2492 admin optional config-dlitz-sudo-env-terminal_0.0.5_all.deb
+ 5cfdb9daea1754eabb87d8d14247e330 2344 admin optional config-dlitz-sudo-nopasswd_0.0.5_all.deb
+ ce02a356f122cd502447689d26fb93f3 3864 admin optional config-dlitz-wireguard-perms_0.0.5_all.deb
+ 97f7f982a602d9e62ec8017faf524b9a 5120 admin optional patch-conffile-dlitz_0.0.5_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iIYEARYKAC4WIQTWkd0xNWtIORg6n8DjQLK2WJpUpAUCZ+y4QhAcZGxpdHpAZGxp
+dHoubmV0AAoJEONAsrZYmlSkTYUBALLEtu/gyKl6fN5H+kQDgp68jySPD70B4Klz
+XnOhU5y7AQDGEHX28fJ1Rke4R/hTK3nivXHt1XiHGmKkau4MGfIzBw==
+=xHwp
+-----END PGP SIGNATURE-----
