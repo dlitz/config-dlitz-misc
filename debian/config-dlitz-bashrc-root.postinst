@@ -32,6 +32,8 @@ case "$1" in
                 --guard-string 'section automatically managed by the config-dlitz-bashrc-root package' \
                 --template /usr/share/config-dlitz-bashrc-root/template \
                 /root/.bashrc
+
+            db_fset config-dlitz-bashrc-root/patch-root-bashrc patched true
         fi
     ;;
 

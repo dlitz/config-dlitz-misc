@@ -25,10 +25,10 @@ case "$1" in
             . /usr/share/debconf/confmodule
             db_version 2.0
 
-            db_get config-dlitz-bashrc-root/patch-root-bashrc
-            want_patch="$RET"
+            db_fget config-dlitz-bashrc-root/patch-root-bashrc patched || RET=
+            was_patched="$RET"
 
-            if [ "$want_patch" = true ] && [ -e /root/.bashrc ]; then
+            if [ "$was_patched" = true ] && [ -e /root/.bashrc ]; then
                 patch-conffile-dlitz \
                     --verbose \
                     --inplace \
