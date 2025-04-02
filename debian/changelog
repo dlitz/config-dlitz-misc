@@ -1,3 +1,10 @@
+config-dlitz-misc (0.0.6) dlitz-aptly; urgency=medium
+
+  * Fix purging config-dlitz-bashrc-root when patch-conffile-dlitz was never
+    installed
+
+ -- Darsey Litzenberger <dlitz@dlitz.net>  Wed, 02 Apr 2025 17:40:26 -0600
+
 config-dlitz-misc (0.0.5) dlitz-aptly; urgency=medium
 
   * Add missing i18n data for config-dlitz-wireguard-perms
