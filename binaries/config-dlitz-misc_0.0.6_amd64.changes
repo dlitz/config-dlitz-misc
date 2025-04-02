@@ -1,0 +1,63 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 02 Apr 2025 17:40:26 -0600
+Source: config-dlitz-misc
+Binary: config-dlitz-bashrc-root config-dlitz-sudo-env-desktop config-dlitz-sudo-env-terminal config-dlitz-sudo-nopasswd config-dlitz-wireguard-perms patch-conffile-dlitz
+Architecture: source all
+Version: 0.0.6
+Distribution: dlitz-aptly
+Urgency: medium
+Maintainer: Darsey Litzenberger <dlitz@dlitz.net>
+Changed-By: Darsey Litzenberger <dlitz@dlitz.net>
+Description:
+ config-dlitz-bashrc-root - Darsey's customizations for root's .bashrc
+ config-dlitz-sudo-env-desktop - Darsey's customizations for sudo environment variables (desktop v
+ config-dlitz-sudo-env-terminal - Darsey's customizations for sudo environment variables (terminal
+ config-dlitz-sudo-nopasswd - "sudo" without password
+ config-dlitz-wireguard-perms - Sets permissions for systemd-networkd to access /etc/wireguard/ke
+ patch-conffile-dlitz - Tool for patching configuration files
+Changes:
+ config-dlitz-misc (0.0.6) dlitz-aptly; urgency=medium
+ .
+   * Fix purging config-dlitz-bashrc-root when patch-conffile-dlitz was never
+     installed
+Checksums-Sha1:
+ 45e978e82aec44542cddcfcb33057dc08a1b696a 1473 config-dlitz-misc_0.0.6.dsc
+ 6eb91410c9343e754b9730fe97b3171f7a574f33 8536 config-dlitz-misc_0.0.6.tar.xz
+ 421d5d73dd4debb13eb36d9324cef473e11b2fa5 4308 config-dlitz-bashrc-root_0.0.6_all.deb
+ 9ef21da820c402f2fd8aba3fbd0c6cc83ff51a84 9129 config-dlitz-misc_0.0.6_amd64.buildinfo
+ 2400367b6b3d83b67e636db9151c112a8928071a 3060 config-dlitz-sudo-env-desktop_0.0.6_all.deb
+ 594be27b869304e4f06981a96085ab494ad62b11 2552 config-dlitz-sudo-env-terminal_0.0.6_all.deb
+ 699a48b070442adedc74b10e94501ecda9f94fa9 2404 config-dlitz-sudo-nopasswd_0.0.6_all.deb
+ cbb45c549992823020f7173ee43077d6fdd9c9d5 3924 config-dlitz-wireguard-perms_0.0.6_all.deb
+ b54139619d02d57a1f681de2cfa05dd7bf9596f1 5192 patch-conffile-dlitz_0.0.6_all.deb
+Checksums-Sha256:
+ d98f0834bb6451b6b7f785307779207647bd985d8d89d1c943ac598baca56e0c 1473 config-dlitz-misc_0.0.6.dsc
+ d66c405ce17d97b2dd12ebaed61a662950008e0219d89f29a56020dc23cd659d 8536 config-dlitz-misc_0.0.6.tar.xz
+ af31bcd4796a1a829682a19625a08bb2ad73f09f23253c0348ded9868263de8d 4308 config-dlitz-bashrc-root_0.0.6_all.deb
+ 47d557d4cb797f899bb9d0f637140442ca2f7e0b8b8c3ca0df243ffc5c2d939e 9129 config-dlitz-misc_0.0.6_amd64.buildinfo
+ 04c8e5a018ac3a73460c00f3fcf5ffd391ba3c4f84ece0c40ccce4bb304a6f75 3060 config-dlitz-sudo-env-desktop_0.0.6_all.deb
+ 38ff6fec82179df952ea32ab4b9820b6ad41ad1077f22fd69f58f98443e376f4 2552 config-dlitz-sudo-env-terminal_0.0.6_all.deb
+ 11ac23d3faf2c59db993bf98e013c24f1a7f42d32290863b318b68185ee535e8 2404 config-dlitz-sudo-nopasswd_0.0.6_all.deb
+ 0026f3ee40ffb78888e2ed59f065699b30131e815fa9ba363f61a89c703e6b78 3924 config-dlitz-wireguard-perms_0.0.6_all.deb
+ efa22d663712c675a07fa9e00ca3ab7f9378471d9c9be4f1e52b7e5d345e519f 5192 patch-conffile-dlitz_0.0.6_all.deb
+Files:
+ 184d7a5436ef2d88253778a6688cddd4 1473 admin optional config-dlitz-misc_0.0.6.dsc
+ 7ac0bb0543985cc8236278992e063f38 8536 admin optional config-dlitz-misc_0.0.6.tar.xz
+ 5500447c13a24f15f706660f507d1390 4308 admin optional config-dlitz-bashrc-root_0.0.6_all.deb
+ f58b1a50d7b061f9458f7979eb20da71 9129 admin optional config-dlitz-misc_0.0.6_amd64.buildinfo
+ ec8d7310853df34b97a8f751421a7029 3060 admin optional config-dlitz-sudo-env-desktop_0.0.6_all.deb
+ d1b0560d77148f9e6762ea77ea580508 2552 admin optional config-dlitz-sudo-env-terminal_0.0.6_all.deb
+ 515fdf7be6f4f506a97638625a55ca29 2404 admin optional config-dlitz-sudo-nopasswd_0.0.6_all.deb
+ 808328e5d984444d42a8f932b53cd032 3924 admin optional config-dlitz-wireguard-perms_0.0.6_all.deb
+ d2a93402b95b1c6e23355ed887b92f6d 5192 admin optional patch-conffile-dlitz_0.0.6_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iIYEARYKAC4WIQTWkd0xNWtIORg6n8DjQLK2WJpUpAUCZ+3LnRAcZGxpdHpAZGxp
+dHoubmV0AAoJEONAsrZYmlSkTj4BAMxpTV6IhpM83bsElCe3t0T7M4187uyKjs7l
+C9LetHDCAQDINHgXwOEv3O77mSppcYrJh3oB4FplYlaHMqlgBW5pAw==
+=preI
+-----END PGP SIGNATURE-----
